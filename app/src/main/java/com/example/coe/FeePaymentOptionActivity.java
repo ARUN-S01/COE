@@ -1,0 +1,92 @@
+package com.example.coe;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class FeePaymentOptionActivity extends AppCompatActivity {
+    public void onCreate(Bundle savedinstance){
+        super.onCreate(savedinstance);
+        int amount = 2000;
+        final String[] mode_of_payment = {null};
+        setContentView(R.layout.fee_payment_activity);
+        TextView amount_text = (TextView) findViewById(R.id.amount_view);
+        amount_text.setText("₹ " + amount);
+        TextView set_method_ = (TextView) findViewById(R.id.set_method);
+        if(mode_of_payment[0] == null){
+            set_method_.setVisibility(View.INVISIBLE);
+        }
+        LinearLayout gpay = (LinearLayout) findViewById(R.id.linearLayout2);
+        gpay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeePaymentOptionActivity.this,"Google Pay",Toast.LENGTH_SHORT).show();
+                mode_of_payment[0] = "Google Pay";
+                set_method_.setVisibility(View.VISIBLE);
+                set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+            }
+        });
+        LinearLayout paytm = (LinearLayout) findViewById(R.id.linearLayout3);
+        paytm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeePaymentOptionActivity.this,"Paytm",Toast.LENGTH_SHORT).show();
+                mode_of_payment[0] = "Paytm";
+                set_method_.setVisibility(View.VISIBLE);
+                set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+            }
+        });
+        LinearLayout credit_debit = (LinearLayout) findViewById(R.id.linearLayout4);
+        credit_debit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeePaymentOptionActivity.this,"Credit or Debit Card",Toast.LENGTH_SHORT).show();
+                mode_of_payment[0] = "Credit or Debit Card";
+                set_method_.setVisibility(View.VISIBLE);
+                set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+            }
+        });
+        LinearLayout apple_pay = (LinearLayout) findViewById(R.id.linearLayout5);
+        apple_pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeePaymentOptionActivity.this,"Apple Pay",Toast.LENGTH_SHORT).show();
+                mode_of_payment[0] = "Apple Pay";
+                set_method_.setVisibility(View.VISIBLE);
+                set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+            }
+        });
+        LinearLayout upi = (LinearLayout) findViewById(R.id.linearLayout6);
+        upi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FeePaymentOptionActivity.this,"Upi Payment",Toast.LENGTH_SHORT).show();
+                mode_of_payment[0] = "Upi Payment";
+                set_method_.setVisibility(View.VISIBLE);
+                set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+            }
+        });
+        Button pay = (Button) findViewById(R.id.payment);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mode_of_payment[0] == null){
+                    Toast.makeText(FeePaymentOptionActivity.this,"Please Choose Payment Mode",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(FeePaymentOptionActivity.this,"Proceeding..",Toast.LENGTH_SHORT).show();
+                    Intent pass_details = new Intent(FeePaymentOptionActivity.this,PaymentConfirmActivity.class);
+                    pass_details.putExtra("mode_payment",mode_of_payment[0]);
+                    pass_details.putExtra("amount",Integer.toString(amount));
+                    startActivity(pass_details);
+                }
+            }
+        });
+    }
+}
