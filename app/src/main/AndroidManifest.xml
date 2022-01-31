@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -18,15 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FeePaymentOptionActivity"
+        <activity android:name=".payment.FeePaymentOptionActivity"
             android:exported="true">
 
         </activity>
-        <activity android:name=".PaymentConfirmActivity"
+        <activity android:name=".payment.PaymentConfirmActivity"
             android:exported="true">
 
         </activity>
-        <activity android:name=".PaymentSuccess"
+        <activity android:name=".payment.PaymentSuccess"
             android:exported="true">
 
         </activity>

@@ -1,10 +1,12 @@
-package com.example.coe;
+package com.example.coe.payment;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.example.coe.R;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;

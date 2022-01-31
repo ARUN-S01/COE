@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaymentConfirmActivity">
+    tools:context=".payment.PaymentConfirmActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -82,14 +82,14 @@
 
     <Button
         android:id="@+id/change_pay"
-        android:layout_width="100dp"
+        android:layout_width="143dp"
         android:layout_height="35dp"
         android:background="@drawable/roundbutton"
         android:backgroundTint="@color/app_color"
         android:elevation="10dp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        android:text="Confirm"
+        android:text="Change Payment"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

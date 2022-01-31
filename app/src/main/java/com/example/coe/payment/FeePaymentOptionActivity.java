@@ -1,4 +1,4 @@
-package com.example.coe;
+package com.example.coe.payment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.coe.R;
 
 public class FeePaymentOptionActivity extends AppCompatActivity {
     public void onCreate(Bundle savedinstance){
@@ -81,7 +83,7 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(FeePaymentOptionActivity.this,"Proceeding..",Toast.LENGTH_SHORT).show();
-                    Intent pass_details = new Intent(FeePaymentOptionActivity.this,PaymentConfirmActivity.class);
+                    Intent pass_details = new Intent(FeePaymentOptionActivity.this, PaymentConfirmActivity.class);
                     pass_details.putExtra("mode_payment",mode_of_payment[0]);
                     pass_details.putExtra("amount",Integer.toString(amount));
                     startActivity(pass_details);

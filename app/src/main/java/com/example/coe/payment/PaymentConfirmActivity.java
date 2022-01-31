@@ -1,4 +1,4 @@
-package com.example.coe;
+package com.example.coe.payment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.coe.R;
 
 public class PaymentConfirmActivity extends AppCompatActivity {
     public void onCreate(Bundle SavedInstance){
@@ -23,7 +25,7 @@ public class PaymentConfirmActivity extends AppCompatActivity {
         proc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent success = new Intent(PaymentConfirmActivity.this,PaymentSuccess.class);
+                Intent success = new Intent(PaymentConfirmActivity.this, PaymentSuccess.class);
                 startActivity(success);
             }
         });
