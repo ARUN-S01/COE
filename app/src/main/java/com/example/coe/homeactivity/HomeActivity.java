@@ -42,9 +42,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         setSupportActionBar(toolbar);
 
-        //View headerView = navigationView.getHeaderView(0);
-        //user_name = (TextView) headerView.findViewById(R.id.username_home);
-        //user_name.setText(app.currentUser().getProfile().getName());
+        View headerView = navigationView.getHeaderView(0);
+        user_name = (TextView) headerView.findViewById(R.id.username_home);
+        user_name.setText(app.currentUser().getProfile().getEmail());
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();

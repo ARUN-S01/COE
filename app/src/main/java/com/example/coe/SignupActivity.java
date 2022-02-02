@@ -54,6 +54,7 @@ public class SignupActivity extends AppCompatActivity {
                     App app = new App(new AppConfiguration.Builder(appID).appName("Application-0").requestTimeout(30, TimeUnit.SECONDS).build());
                     app.getEmailPassword().registerUserAsync(email, password, it -> {
                         if (it.isSuccess()) {
+
                             Toast.makeText(SignupActivity.this,"Successfully registered user",Toast.LENGTH_SHORT).show();
                             Log.i("EXAMPLE", "Successfully registered user.");
                         } else {

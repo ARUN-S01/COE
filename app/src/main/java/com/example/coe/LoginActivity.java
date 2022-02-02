@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (it.isSuccess()) {
                             Log.v("AUTH", "Successfully authenticated using an email and password.");
                             user.set(app.currentUser());
-                            Toast.makeText(LoginActivity.this,app.currentUser().getProfile().getUser().toString(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this,app.currentUser().getProfile().getUser().toString(), Toast.LENGTH_SHORT).show();
                             Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                             //Toast.makeText(LoginActivity.this, app.currentUser().toString(),Toast.LENGTH_SHORT).show();

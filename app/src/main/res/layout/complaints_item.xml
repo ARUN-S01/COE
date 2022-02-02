@@ -11,6 +11,9 @@
     android:id="@+id/complaintCard"
     android:layout_marginTop="10dp"
     android:theme="@style/Theme.MaterialComponents.Light"
+    android:elevation="10dp"
+    android:outlineAmbientShadowColor="@color/black"
+    android:outlineSpotShadowColor="@color/black"
     >
 
     <RelativeLayout

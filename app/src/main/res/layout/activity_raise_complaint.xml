@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".complaints.RaiseComplaintActivity">
+    tools:context=".complaints.RaiseComplaintActivity"
+    android:theme="@style/Theme.MaterialComponents.Light">
 
     <ImageView
         android:id="@+id/btnPrevious"
@@ -43,7 +44,12 @@
             style="@style/inputTextLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black">
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtName"
@@ -70,9 +76,14 @@
         android:paddingHorizontal="25dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black">
 
             <AutoCompleteTextView
                 android:id="@+id/listComplaintType"
@@ -101,7 +112,11 @@
             style="@style/inputTextLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black">
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="5dp"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black">>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtComplaintName"
@@ -130,7 +145,11 @@
             style="@style/inputTextLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black">
+            android:backgroundTint="@color/black"
+            android:elevation="10dp"
+            android:layout_marginLeft="5dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black">>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtCompalintDescription"
