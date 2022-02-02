@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.coe.homeactivity.HomeActivity;
+
+import org.w3c.dom.Text;
+
 import java.util.concurrent.atomic.AtomicReference;
 
 import io.realm.Realm;
@@ -24,6 +28,8 @@ import io.realm.mongodb.Credentials;
 import io.realm.mongodb.User;
 
 public class LoginActivity extends AppCompatActivity {
+    public static AtomicReference<User> user;
+    public static  App app;
     @Override
     public void onCreate(Bundle SavedInstance) {
         super.onCreate(SavedInstance);
@@ -50,17 +56,19 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else{
                     String appID = "application-0-zlrxg"; // replace this with your App ID
-                    App app = new App(new AppConfiguration.Builder(appID)
+                    app = new App(new AppConfiguration.Builder(appID)
                             .build());
 
                     Credentials emailPasswordCredentials = Credentials.emailPassword(email, password);
 
-                    AtomicReference<User> user = new AtomicReference<User>();
+                    user = new AtomicReference<User>();
                     app.loginAsync(emailPasswordCredentials, it -> {
                         if (it.isSuccess()) {
                             Log.v("AUTH", "Successfully authenticated using an email and password.");
                             user.set(app.currentUser());
-                            Toast.makeText(LoginActivity.this,"Logn Success",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this,app.currentUser().getProfile().getUser().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                             //Toast.makeText(LoginActivity.this, app.currentUser().toString(),Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(LoginActivity.this,it.getError().toString(),Toast.LENGTH_SHORT).show();

@@ -29,6 +29,9 @@ android {
     realm {
         syncEnabled = true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -41,5 +44,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'nl.dionsegijn:konfetti-compose:2.0.1'
     implementation 'nl.dionsegijn:konfetti-xml:2.0.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     implementation "com.google.android.gms:play-services-wallet:18.0.0"
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.google.ar.sceneform:filament-android:1.17.1'
 }

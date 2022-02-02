@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="1dp"
+    android:id="@+id/complaintCard"
+    android:layout_marginTop="10dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtIssueName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name of The Issue"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtRaisedOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtIssueName"
+            android:layout_marginTop="20dp"
+            android:text="Raised On:" />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtRaisedOnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/12/22"
+            android:layout_toRightOf="@id/txtRaisedOn"
+            android:layout_below="@id/txtIssueName"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:layout_below="@+id/txtIssueName"
+            android:layout_toRightOf="@id/txtRaisedOnDate"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtStatusValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtIssueName"
+            android:layout_toRightOf="@id/txtStatus"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="Pending"/>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

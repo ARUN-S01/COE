@@ -24,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.878"
+        android:fontFamily="@font/montserrat"
         android:backgroundTint="@color/app_color"
         android:background="@drawable/roundbutton"
         android:textColor="@color/white"

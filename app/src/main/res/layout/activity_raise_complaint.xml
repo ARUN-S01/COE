@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".complaints.RaiseComplaintActivity">
+
+    <ImageView
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/btnPrevious"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/complaints"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/blockName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="Name"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blockComplaintType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="25dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/listComplaintType"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/light_grey"
+                android:hint="@string/complainttype"
+                android:inputType="none"
+                android:textSize="17sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blockComplaintName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockComplaintType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="30dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtComplaintName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="@string/complaintname"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blockComplaintName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="30dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCompalintDescription"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="top"
+                android:hint="Complaint Description"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/raisecomplaint"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="10dp" />
+
+
+</RelativeLayout>

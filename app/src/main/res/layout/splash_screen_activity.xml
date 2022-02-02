@@ -19,8 +19,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="192dp"
-        android:layout_height="26dp"
+        android:layout_width="229dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/montserrat"
         android:text="Center Of Excellence (COE)"
         android:textColor="@color/app_color"
         android:textSize="16dp"

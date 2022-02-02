@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".complaints.ComplaintsActivity">
+
+
+    <ImageView
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:fontFamily="@font/montserrat"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/complaints"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/btnPrevious"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/btnFilter"
+        android:layout_width="100dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/btnPrevious"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/icFilter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_filter" />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icFilter"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:text="@string/filter"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewComplaints"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnFilter"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRaiseTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/red"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_plus" />
+
+</RelativeLayout>

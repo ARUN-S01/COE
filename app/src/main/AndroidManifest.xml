@@ -38,6 +38,26 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".complaints.RaiseComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".complaints.ComplaintDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".complaints.ComplaintsActivity"
+            android:exported="false" />
+        <activity android:name=".homeactivity.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
 
 
     </application>

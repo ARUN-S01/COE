@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.navTheme">
+
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">@color/black</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">@color/red</item>
+
+    </style>
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="ToolbarTheme.Text">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+        <item name="barLength">24dp</item>
+        <item name="gapBetweenBars">4dp</item>
+        <item name="thickness">3dp</item>
+
+    </style>
+
+    <style name="inputTextLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="strokeColor">@color/black</item>
+    </style>
 </resources>

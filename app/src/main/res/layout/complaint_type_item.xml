@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView android:layout_width="match_parent"
+    android:paddingHorizontal="10dp"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:text="TextView"
+    android:textSize="17sp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/montserrat"
+    android:background="@drawable/input_box_style"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

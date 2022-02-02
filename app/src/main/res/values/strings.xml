@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">COE</string>
+    <string name="home">Home</string>
+    <string name="announcements">Announcements</string>
+    <string name="timetable">Time Table</string>
+    <string name="result">Result</string>
+    <string name="complaints">Complaints</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="filter">sort by</string>
+    <string name="withdrawcomplaint">Withdraw Complaint</string>
+    <string name="name">Name</string>
+    <string name="yourname">Your name</string>
+    <string name="complaintname">Complaint Name</string>
+    <string name="complainttype">Complaint Type</string>
+
+    <string name="samplestring">
+            I am writing this complaint regarding the payment issue that i had.
+        I was trying to make a payment and the respective amount is debited from my account.
+        But i am still not able to access the exam.
+        Please take a loot at this issue as soon as possible
+    </string>
+    <string name="raisecomplaint">Raise Complaint</string>
+
+    <string-array name="complaint_types">
+        <item>Complaint type1</item>
+        <item>Complaint type2</item>
+        <item>Complaint type3</item>
+        <item>Complaint type4</item>
+        <item>Complaint type5</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:id="@+id/navHome"
+            android:icon="@drawable/homeic"
+            android:title="@string/home" />
+        <item
+            android:checkable="true"
+            android:id="@+id/navAnnouncements"
+            android:icon="@drawable/announcementicon"
+            android:title="@string/announcements" />
+        <item
+            android:checkable="true"
+            android:id="@+id/navTimeTable"
+            android:icon="@drawable/timetableicon"
+            android:title="@string/timetable" />
+        <item
+            android:checkable="true"
+            android:id="@+id/navResult"
+            android:icon="@drawable/resultsicon"
+            android:title="@string/result" />
+        <item
+            android:checkable="true"
+            android:id="@+id/navComplaints"
+            android:icon="@drawable/complaintsicon"
+            android:title="@string/complaints" />
+    </group>
+
+</menu>

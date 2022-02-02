@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="43dp"
-
+            android:fontFamily="@font/montserrat"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="0dp"
@@ -40,6 +40,7 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="2dp"
             android:text="₹ 1000"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/white"
             android:textSize="36dp" />
 
@@ -51,6 +52,7 @@
         android:layout_height="31dp"
         android:text="Choose Any Mode Of Payment"
         android:textSize="18dp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
@@ -191,6 +193,7 @@
         android:text="null"
         android:textSize="18dp"
         android:gravity="center"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -205,6 +208,7 @@
         android:backgroundTint="@color/app_color"
         android:text="Cancel"
         android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
@@ -224,6 +228,7 @@
         android:text="Payment"
         android:background="@drawable/roundbutton"
         android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.791"
