@@ -24,7 +24,6 @@
             app:navigationIconTint="@color/black"
             app:title="@string/app_name"
             app:titleTextAppearance="@style/ToolbarTheme.Text"
-
             >
 
 

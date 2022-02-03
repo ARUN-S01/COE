@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.coe.LogoutActivity;
 import com.example.coe.R;
 import com.example.coe.complaints.ComplaintsActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -97,6 +98,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.navComplaints:
 
                 startActivity(new Intent(HomeActivity.this, ComplaintsActivity.class));
+                break;
+            case R.id.navLogout:
+                startActivity(new Intent(HomeActivity.this, LogoutActivity.class));
                 break;
         }
 

@@ -28,6 +28,11 @@
             android:id="@+id/navComplaints"
             android:icon="@drawable/complaintsicon"
             android:title="@string/complaints" />
+        <item
+            android:checkable="true"
+            android:id="@+id/navLogout"
+            android:icon="@drawable/logout"
+            android:title="@string/logout" />
     </group>
 
 </menu>
