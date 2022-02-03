@@ -14,13 +14,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.coe.R;
 import com.example.coe.complaints.ComplaintsActivity;
 import com.google.android.material.navigation.NavigationView;
+
+import org.bson.Document;
+
+import io.realm.mongodb.User;
+import io.realm.mongodb.mongo.MongoClient;
+import io.realm.mongodb.mongo.MongoCollection;
+import io.realm.mongodb.mongo.MongoDatabase;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
@@ -32,6 +41,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         drawerLayout = findViewById(R.id.drawerview);
@@ -41,10 +51,27 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         setSupportActionBar(toolbar);
-
         View headerView = navigationView.getHeaderView(0);
         user_name = (TextView) headerView.findViewById(R.id.username_home);
-        user_name.setText(app.currentUser().getProfile().getEmail());
+
+        User user1 = app.currentUser();
+        Document doc = new Document("user-id-field",user1.getId());
+        MongoClient mongoClient = user1.getMongoClient("mongodb-atlas");
+        MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
+        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
+        mongoCollection.findOne(doc).getAsync(task -> {
+            if (task.isSuccess()) {
+                Document result = task.get();
+
+                //Toast.makeText(HomeActivity.this,result.get("name").toString(),Toast.LENGTH_SHORT).show();
+                //to_update = result.get("name").toString();
+                user_name.setText(result.get("name").toString());
+                Log.v("EXAMPLE", "successfully found a document: " + result);
+            } else {
+                Log.e("EXAMPLE", "failed to find document with: ", task.getError());
+            }
+        });
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -86,4 +113,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
 }
+

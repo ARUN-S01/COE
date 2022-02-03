@@ -16,7 +16,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.coe.homeactivity.HomeActivity;
-
+import static com.example.coe.SignupActivity.name;
+import org.bson.Document;
 import org.w3c.dom.Text;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -26,15 +27,26 @@ import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
 import io.realm.mongodb.Credentials;
 import io.realm.mongodb.User;
+import io.realm.mongodb.mongo.MongoClient;
+import io.realm.mongodb.mongo.MongoCollection;
+import io.realm.mongodb.mongo.MongoDatabase;
 
 public class LoginActivity extends AppCompatActivity {
     public static AtomicReference<User> user;
-    public static  App app;
+    public static App app;
+    boolean erro = false;
     @Override
     public void onCreate(Bundle SavedInstance) {
         super.onCreate(SavedInstance);
         Realm.init(this);
         setContentView(R.layout.login_activity);
+       // Toast.makeText(LoginActivity.this,name,Toast.LENGTH_SHORT)
+        try{
+            Toast.makeText(LoginActivity.this,name,Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            erro = true;
+        }
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         EditText login_email = (EditText) findViewById(R.id.loginemail);
         EditText login_password = (EditText) findViewById(R.id.loginpassword);
@@ -56,8 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else{
                     String appID = "application-0-zlrxg"; // replace this with your App ID
-                    app = new App(new AppConfiguration.Builder(appID)
-                            .build());
+                    app = new App(new AppConfiguration.Builder(appID).build());
 
                     Credentials emailPasswordCredentials = Credentials.emailPassword(email, password);
 
@@ -66,7 +77,13 @@ public class LoginActivity extends AppCompatActivity {
                         if (it.isSuccess()) {
                             Log.v("AUTH", "Successfully authenticated using an email and password.");
                             user.set(app.currentUser());
-                            //Toast.makeText(LoginActivity.this,app.currentUser().getProfile().getUser().toString(), Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(LoginActivity.this,customUserData.toString(), Toast.LENGTH_SHORT).show();
+                            if(erro){
+
+                            }
+                            else{
+                                createField();
+                            }
                             Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                             //Toast.makeText(LoginActivity.this, app.currentUser().toString(),Toast.LENGTH_SHORT).show();
@@ -87,5 +104,30 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(signup);
             }
         });
+    }
+    public void createField(){
+        if(name.length() != 0 | name != null){
+            User user = app.currentUser();
+            MongoClient mongoClient = user.getMongoClient("mongodb-atlas");
+            MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
+            MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
+            mongoCollection.insertOne(
+                    new Document("user-id-field", user.getId()).append("name",name).append("exams","Nil"))
+                    .getAsync(result -> {
+                        if (result.isSuccess()) {
+                            //Toast.makeText(LoginActivity.this,"Inserted custom user data document. _id of inserted document: "
+                                //    + result.get().getInsertedId(),Toast.LENGTH_SHORT).show();
+                            User user1 = app.currentUser();
+                            Document customUserData = user1.getCustomData();
+                            //Toast.makeText(LoginActivity.this,customUserData.toString(),Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this,result.getError().toString(),Toast.LENGTH_SHORT).show();
+                            Log.e("EXAMPLE", "Unable to insert custom user data. Error: " + result.getError());
+                        }
+                    });
+        }
+        else{
+            return;
+        }
     }
 }
