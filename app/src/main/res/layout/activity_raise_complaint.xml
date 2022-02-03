@@ -167,6 +167,7 @@
     </RelativeLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/raise"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"

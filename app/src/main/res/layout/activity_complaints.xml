@@ -81,4 +81,17 @@
         app:borderWidth="0dp"
         app:srcCompat="@drawable/ic_plus" />
 
+    <TextView
+        android:id="@+id/no_complaints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="405dp"
+        android:layout_marginBottom="307dp"
+        android:visibility="gone"
+        android:text="Add Complaints"
+        android:textSize="16dp" />
+
 </RelativeLayout>

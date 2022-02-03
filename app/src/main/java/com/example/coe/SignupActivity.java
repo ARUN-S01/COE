@@ -62,8 +62,8 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    String appID = "application-0-zlrxg"; // replace this with your App ID
-                    App app = new App(new AppConfiguration.Builder(appID).appName("Application-0").requestTimeout(30, TimeUnit.SECONDS).build());
+                    String appID = "coe_tce-kacth"; // replace this with your App ID
+                    App app = new App(new AppConfiguration.Builder(appID).appName("coe_tce").requestTimeout(30, TimeUnit.SECONDS).build());
                     app.getEmailPassword().registerUserAsync(email, password, it -> {
                         if (it.isSuccess()) {
                             Toast.makeText(SignupActivity.this,"Successfully registered user",Toast.LENGTH_SHORT).show();

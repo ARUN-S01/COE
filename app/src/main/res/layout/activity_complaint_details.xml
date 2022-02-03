@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
     tools:context=".complaints.ComplaintDetailsActivity">
 
     <ImageView
         android:id="@+id/btnPrevious"
         android:layout_width="30dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
         app:srcCompat="@drawable/ic_back_button" />
 
     <TextView
@@ -39,29 +40,30 @@
 
         <TextView
             android:id="@+id/txtIssueName"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="Issue Name PlaceHolder"
-            android:textSize="20sp" />
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <ScrollView
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="402dp"
-            android:background="@drawable/complains_desc_box_style">
+            android:layout_marginTop="15dp"
+            android:background="@drawable/complains_desc_box_style"
+            android:theme="@style/Theme.MaterialComponents.Light">
 
             <TextView
                 android:id="@+id/txtIssueDescription"
-                android:padding="15dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/montserrat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/samplestring"/>
+                android:fontFamily="@font/montserrat"
+                android:padding="15dp"
+                android:text="@string/samplestring"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </ScrollView>
 
     </LinearLayout>
@@ -70,17 +72,20 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnWithDraw"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
+        android:layout_height="35dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="45dp"
-        android:backgroundTint="@color/red"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/app_color"
         android:fontFamily="@font/montserrat"
         android:text="@string/withdrawcomplaint"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:textSize="16dp"
         app:cornerRadius="10dp" />
 
 

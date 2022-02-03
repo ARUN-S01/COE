@@ -62,7 +62,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mongoCollection.findOne(doc).getAsync(task -> {
             if (task.isSuccess()) {
                 Document result = task.get();
-
                 //Toast.makeText(HomeActivity.this,result.get("name").toString(),Toast.LENGTH_SHORT).show();
                 //to_update = result.get("name").toString();
                 user_name.setText(result.get("name").toString());
@@ -96,6 +95,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 // Add your navigational page code
                 break;
             case R.id.navComplaints:
+
                 startActivity(new Intent(HomeActivity.this, ComplaintsActivity.class));
                 break;
         }

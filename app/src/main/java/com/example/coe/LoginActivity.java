@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    String appID = "application-0-zlrxg"; // replace this with your App ID
+                    String appID = "coe_tce-kacth"; // replace this with your App ID
                     app = new App(new AppConfiguration.Builder(appID).build());
 
                     Credentials emailPasswordCredentials = Credentials.emailPassword(email, password);
@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
             MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
             MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
             mongoCollection.insertOne(
-                    new Document("user-id-field", user.getId()).append("name",name).append("exams","Nil"))
+                    new Document("user-id-field", user.getId()).append("name",name).append("exams",0).append("complaint",false).append("complaint_name","nil").append("complaint_description","nil").append("complaint_date","0/0/0").append("complaint_status","nil"))
                     .getAsync(result -> {
                         if (result.isSuccess()) {
                             //Toast.makeText(LoginActivity.this,"Inserted custom user data document. _id of inserted document: "
