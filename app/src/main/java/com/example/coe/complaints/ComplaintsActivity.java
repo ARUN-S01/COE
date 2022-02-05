@@ -47,7 +47,7 @@ public class ComplaintsActivity extends AppCompatActivity {
         Document to_find = new Document("user-id-field",user1.getId());
         MongoClient mongoClient = user1.getMongoClient("mongodb-atlas");
         MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
-        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
+        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("complaints");
 
         complaintsRecView = findViewById(R.id.recViewComplaints);
         btnBack =  findViewById(R.id.btnPrevious);

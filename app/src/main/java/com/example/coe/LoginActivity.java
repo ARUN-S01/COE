@@ -112,11 +112,41 @@ public class LoginActivity extends AppCompatActivity {
             MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
             MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
             mongoCollection.insertOne(
-                    new Document("user-id-field", user.getId()).append("name",name).append("exams",0).append("complaint",false).append("complaint_name","nil").append("complaint_description","nil").append("complaint_date","0/0/0").append("complaint_status","nil"))
+                    new Document("user-id-field", user.getId()).append("name",name))
                     .getAsync(result -> {
                         if (result.isSuccess()) {
                             //Toast.makeText(LoginActivity.this,"Inserted custom user data document. _id of inserted document: "
                                 //    + result.get().getInsertedId(),Toast.LENGTH_SHORT).show();
+                            User user1 = app.currentUser();
+                            Document customUserData = user1.getCustomData();
+                            //Toast.makeText(LoginActivity.this,customUserData.toString(),Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this,result.getError().toString(),Toast.LENGTH_SHORT).show();
+                            Log.e("EXAMPLE", "Unable to insert custom user data. Error: " + result.getError());
+                        }
+                    });
+            MongoCollection<Document> mongoCollection1 = mongoDatabase.getCollection("exam_registeration");
+            mongoCollection1.insertOne(
+                    new Document("user-id-field", user.getId()).append("course_name","nil").append("exam_date","nil").append("exam_fees","nil").append("status","Not Completed").append("result","Nil"))
+                    .getAsync(result -> {
+                        if (result.isSuccess()) {
+                            //Toast.makeText(LoginActivity.this,"Inserted custom user data document. _id of inserted document: "
+                            //    + result.get().getInsertedId(),Toast.LENGTH_SHORT).show();
+                           // User user1 = app.currentUser();
+                           // Document customUserData = user1.getCustomData();
+                            //Toast.makeText(LoginActivity.this,customUserData.toString(),Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this,result.getError().toString(),Toast.LENGTH_SHORT).show();
+                            Log.e("EXAMPLE", "Unable to insert custom user data. Error: " + result.getError());
+                        }
+                    });
+            MongoCollection<Document> mongoCollection2 = mongoDatabase.getCollection("complaints");
+            mongoCollection2.insertOne(
+                    new Document("user-id-field", user.getId()).append("complaint",false).append("complaint_name","nil").append("complaint_description","nil").append("complaint_date","0/0/0").append("complaint_status","nil"))
+                    .getAsync(result -> {
+                        if (result.isSuccess()) {
+                            //Toast.makeText(LoginActivity.this,"Inserted custom user data document. _id of inserted document: "
+                            //    + result.get().getInsertedId(),Toast.LENGTH_SHORT).show();
                             User user1 = app.currentUser();
                             Document customUserData = user1.getCustomData();
                             //Toast.makeText(LoginActivity.this,customUserData.toString(),Toast.LENGTH_SHORT).show();
