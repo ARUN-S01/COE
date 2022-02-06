@@ -197,6 +197,7 @@ public class ComplaintsActivity extends AppCompatActivity {
                 //startActivity(new Intent(ComplaintsActivity.this, HomeActivity.class));
                 iss_name = null;iss_details = null; date = null; status = null;
                 startActivity(new Intent(ComplaintsActivity.this, HomeActivity.class));
+                finish();
                 //finish();
             }
         });

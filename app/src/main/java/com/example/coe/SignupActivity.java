@@ -74,6 +74,7 @@ public class SignupActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                             startActivity(new Intent(SignupActivity.this,LoginActivity.class));
+                            finish();
                             Log.i("EXAMPLE", "Successfully registered user.");
                         } else {
                             Toast.makeText(SignupActivity.this,it.getError().toString(),Toast.LENGTH_SHORT).show();
