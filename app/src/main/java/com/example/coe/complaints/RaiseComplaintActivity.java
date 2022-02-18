@@ -2,6 +2,7 @@ package com.example.coe.complaints;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -44,6 +46,8 @@ public class RaiseComplaintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         setContentView(R.layout.activity_raise_complaint);
+        ImageView im_back = (ImageView) findViewById(R.id.btnPrevious);
+
         Button raise = (Button) findViewById(R.id.raise);
         EditText usr_txt = (EditText) findViewById(R.id.txtName);
 
@@ -88,6 +92,12 @@ public class RaiseComplaintActivity extends AppCompatActivity {
                     //finishAffinity();
                     startActivity(new Intent(RaiseComplaintActivity.this,ComplaintsActivity.class));
                 }
+            }
+        });
+        im_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

@@ -20,6 +20,7 @@ import static com.example.coe.SignupActivity.name;
 import org.bson.Document;
 import org.w3c.dom.Text;
 
+import java.util.Locale;
 import java.util.concurrent.atomic.AtomicReference;
 
 import io.realm.Realm;
@@ -42,7 +43,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login_activity);
        // Toast.makeText(LoginActivity.this,name,Toast.LENGTH_SHORT)
         try{
-            Toast.makeText(LoginActivity.this,name,Toast.LENGTH_SHORT).show();
+            //System.out.println(name);
+            String sample = name.toLowerCase();
+           // Toast.makeText(LoginActivity.this,name,Toast.LENGTH_SHORT).show();
         }
         catch (Exception e){
             erro = true;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <TextView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="10dp"
     android:layout_height="50dp"
     android:gravity="center_vertical"
@@ -8,5 +9,14 @@
     android:textSize="17sp"
     android:textColor="@color/black"
     android:fontFamily="@font/montserrat"
-    android:background="@drawable/input_box_style"
+    android:background="@drawable/roundbutton"
+    app:boxCornerRadiusBottomEnd="20dp"
+    app:boxCornerRadiusBottomStart="20dp"
+    app:boxCornerRadiusTopEnd="20dp"
+    app:boxCornerRadiusTopStart="20dp"
+    app:layout_constraintHorizontal_bias="0.440"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.32"
+
     xmlns:android="http://schemas.android.com/apk/res/android" />

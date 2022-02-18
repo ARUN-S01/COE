@@ -12,22 +12,22 @@
         android:layout_width="30dp"
         android:layout_height="48dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         app:srcCompat="@drawable/ic_back_button" />
 
     <TextView
-        android:fontFamily="@font/montserrat"
         android:id="@+id/pageTitle"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="@string/complaints"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:layout_toRightOf="@id/btnPrevious"
-        android:layout_marginTop="7dp"
+        android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:layout_marginLeft="10dp"/>
+        android:text="Raise Complaint"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:id="@+id/contentBox"
@@ -84,8 +84,8 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/withdrawcomplaint"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:cornerRadius="10dp" />
 
 

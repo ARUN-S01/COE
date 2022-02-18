@@ -12,7 +12,8 @@
             android:checkable="true"
             android:id="@+id/navAnnouncements"
             android:icon="@drawable/announcementicon"
-            android:title="@string/announcements" />
+            android:title="@string/announcements"
+            />
         <item
             android:checkable="true"
             android:id="@+id/navTimeTable"

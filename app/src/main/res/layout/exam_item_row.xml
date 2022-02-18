@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="1dp"
+    android:id="@+id/cardExamination"
+    android:layout_marginTop="15dp"
+
+    android:theme="@style/Theme.MaterialComponents.Light"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCourseNameLayout">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txtCourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/btnHallTicket"
+                android:fontFamily="@font/montserrat"
+                android:text="Name of The Issue"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHallTicket"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="35dp"
+                app:cornerRadius="5dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/red"
+                android:gravity="center"
+                android:text="Hall Ticket"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtLabelFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCourseNameLayout"
+            android:layout_marginTop="20dp"
+            android:text="Fee :" />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/txtFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs.2000"
+            android:layout_toRightOf="@id/txtLabelFee"
+            android:layout_below="@id/txtCourseNameLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtLabelLastDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCourseNameLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/txtLastDate"
+            android:fontFamily="@font/montserrat"
+            android:text="Last Date:" />
+
+        <TextView
+            android:id="@+id/txtLastDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCourseNameLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="12/12/22"
+            android:textColor="@color/black" />
+
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

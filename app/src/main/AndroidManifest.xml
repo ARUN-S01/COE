@@ -32,6 +32,10 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".examactivity.ExamDetails"
+            android:exported="true">
+
+        </activity>
         <activity android:name=".payment.PaymentConfirmActivity"
             android:exported="true">
 
