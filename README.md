@@ -1,3 +1,3 @@
-### Thiagarajar College of Engineering
-# COE
+# Thiagarajar College of Engineering
+## COE
 ## Center Of Excellence (COE)
