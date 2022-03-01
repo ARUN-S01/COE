@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".examregisterationactivity.ExamRegisterationActivity"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    >
+
+    <ImageView
+        android:id="@+id/btnPrevious_reg"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/btnPrevious"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/exam_registration"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/registrationForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="10dp"
+        android:padding="25dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtNameHolder"
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="Name"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtRegisterNoHolder"
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNameHolder"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtRegisterNo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="Register No"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textSize="17sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtFeeHolder"
+            style="@style/inputTextLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRegisterNoHolder"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/listFeeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Amount to be paid"
+                android:inputType="text"
+                android:textSize="17sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFeeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFeeHolder"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="@color/light_grey"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="15dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtFeeDetailsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Fee details"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtExamFeeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtFeeDetailsLabel"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Exam Fees :"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/DetailExamFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtFeeDetailsLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtExamFeeLabel"
+                    android:fontFamily="@font/montserrat"
+                    android:text="1200"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtCenterFeeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtExamFeeLabel"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Center Fees :"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/DetailCenterFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtExamFeeLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtCenterFeeLabel"
+                    android:fontFamily="@font/montserrat"
+                    android:text="200"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtGSTLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCenterFeeLabel"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="GST :"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtGST"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCenterFeeLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtGSTLabel"
+                    android:fontFamily="@font/montserrat"
+                    android:text="150"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtTaxLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtGSTLabel"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="TAX :"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtGSTLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtTaxLabel"
+                    android:fontFamily="@font/montserrat"
+                    android:text="50"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtTotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTaxLabel"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Total :"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTaxLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/txtTotalLabel"
+                    android:fontFamily="@font/montserrat"
+                    android:text="50"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReset"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/red"
+        android:text="Reset"
+        app:cornerRadius="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPayment"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/red"
+        android:text="Payment"
+        app:cornerRadius="5dp" />
+
+
+
+</RelativeLayout>

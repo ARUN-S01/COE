@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".adminactivity.admincreateexamactivity.CreateExamActivity">
+
+    <ImageView
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/exam"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/btnPrevious"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtExamNameHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAdminExamName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Exam Name"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtFeeHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtExamNameHolder"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/black">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAdminFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Fee"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtEligibilityHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_below="@id/txtFeeHolder"
+                android:layout_marginTop="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAdminEligibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Eligibility"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtExamDateHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_below="@id/txtEligibilityHolder"
+                android:layout_marginTop="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtExamDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Exam Date"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLastDateHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_below="@id/txtExamDateHolder"
+                android:layout_marginTop="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtLastDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Last Date for Fee Payment"
+                    android:inputType="text"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLastDateWithFineHolder"
+                style="@style/inputTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_below="@id/txtLastDateHolder"
+                android:layout_marginTop="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtLastDateWithFine"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/txtLastDate"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Last Date with fine"
+                    android:inputType="text"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColorHint="@color/black"
+                    android:textSize="17sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateExam"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtLastDateWithFineHolder"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="35dp"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/create_exam"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

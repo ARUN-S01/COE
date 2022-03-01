@@ -3,9 +3,10 @@
     package="com.example.coe">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/tce"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -29,30 +30,60 @@
         <activity android:name=".SignupActivity"
             android:exported="true"/>
         <activity android:name=".payment.FeePaymentOptionActivity"
-            android:exported="true">
-
+            android:exported="false">
         </activity>
         <activity android:name=".examactivity.ExamDetails"
             android:exported="true">
 
         </activity>
         <activity android:name=".payment.PaymentConfirmActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity android:name=".payment.PaymentSuccess"
             android:exported="true">
 
         </activity>
+        <activity android:name=".notificationactivity.NotificationActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".adminactivity.examsactivity.AdminExamsActivity"
+            android:exported="false" />
         <activity
             android:name=".complaints.RaiseComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".examregisterationactivity.ExamRegisterationActivity"
             android:exported="false" />
         <activity
             android:name=".complaints.ComplaintDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".resultactivity.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".complaints.ComplaintsActivity"
             android:exported="false" />
+        <activity
+            android:name=".timetableactivity.TimeTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adminactivity.useractivity.UsersListActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".adminactivity.AdminHomeActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".adminactivity.admincreateexamactivity.CreateExamActivity"
+            android:exported="false" />
+
         <activity android:name=".homeactivity.HomeActivity"
             android:exported="true">
             <intent-filter>
@@ -63,8 +94,20 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
+        <service android:name=".FirebaseMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".createnotification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
 
     </application>
 

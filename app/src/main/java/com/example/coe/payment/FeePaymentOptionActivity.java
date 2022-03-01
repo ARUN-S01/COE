@@ -1,5 +1,7 @@
 package com.example.coe.payment;
 
+import static com.example.coe.examactivity.ExamsAdapter.clicked_exam_fee;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,11 +23,13 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
         super.onCreate(savedinstance);
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         int amount = 2000;
+        Button but = (Button) findViewById(R.id.cancelButton);
         final String[] mode_of_payment = {null};
         setContentView(R.layout.fee_payment_activity);
+
         Button pay = (Button) findViewById(R.id.payment);
         TextView amount_text = (TextView) findViewById(R.id.amount_view);
-        amount_text.setText("₹ " + amount);
+        amount_text.setText("₹ " + clicked_exam_fee);
         TextView set_method_ = (TextView) findViewById(R.id.set_method);
         if(mode_of_payment[0] == null){
 
@@ -97,11 +101,17 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(FeePaymentOptionActivity.this,"Proceeding..",Toast.LENGTH_SHORT).show();
-                    Intent pass_details = new Intent(FeePaymentOptionActivity.this, PaymentConfirmActivity.class);
-                    pass_details.putExtra("mode_payment",mode_of_payment[0]);
-                    pass_details.putExtra("amount",Integer.toString(amount));
-                    startActivity(pass_details);
+                    //Intent pass_details = new Intent(FeePaymentOptionActivity.this, PaymentConfirmActivity.class);
+                    //pass_details.putExtra("mode_payment",mode_of_payment[0]);
+                   // pass_details.putExtra("amount",clicked_exam_fee);
+                    //startActivity(pass_details);
                 }
+            }
+        });
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

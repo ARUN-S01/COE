@@ -13,9 +13,13 @@
     <color name="red">#840002</color>
     <color name="light_grey">#E5E5E5</color>
     <color name="hint_color">#757779</color>
+    <color name="pinkish_card_color">#F4EFF4</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#000000</color>
     <color name="brown">#830000</color>
     <color name="sandal">#FFFEF6</color>
+    <color name="orange">#FF5620</color>
+    <color name="darkblue">#25479D</color>
+
     <color name="box_color">#E5E5E5</color>
     <color name="lightsan">#FAEEEE</color>
     <color name="innershadow">#B0DA98</color>

@@ -202,42 +202,42 @@
         app:layout_constraintVertical_bias="0.792" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:id="@+id/cancelButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundbutton"
         android:backgroundTint="@color/app_color"
+        android:elevation="10dp"
+        android:fontFamily="@font/montserrat"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
         android:text="Cancel"
         android:textColor="@color/white"
-        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907"
-        android:elevation="10dp"
-        android:background="@drawable/roundbutton"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.908" />
 
     <Button
         android:id="@+id/payment"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:backgroundTint="@color/app_color"
-        android:text="Payment"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:background="@drawable/roundbutton"
-        android:textColor="@color/white"
+        android:backgroundTint="@color/app_color"
+        android:elevation="10dp"
         android:fontFamily="@font/montserrat"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Payment"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907"
-        android:elevation="10dp"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.908" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

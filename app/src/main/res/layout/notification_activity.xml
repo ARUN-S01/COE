@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notificationactivity.NotificationActivity">
+
+
+    <ImageView
+        android:id="@+id/btnPrevious1"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/btnPrevious1"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/notification"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnPrevious1"
+        android:padding="20dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>

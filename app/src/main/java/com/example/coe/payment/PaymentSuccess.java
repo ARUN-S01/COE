@@ -45,18 +45,17 @@ public class PaymentSuccess extends AppCompatActivity {
         konfettiView.setOnClickListener(view ->
                 konfettiView.start(party)
         );
-        rain();
+        explode();
     }
-    public void rain() {
-        EmitterConfig emitterConfig = new Emitter(5, TimeUnit.SECONDS).perSecond(100);
+    public void explode() {
+        EmitterConfig emitterConfig = new Emitter(100L, TimeUnit.MILLISECONDS).max(100);
         konfettiView.start(
                 new PartyFactory(emitterConfig)
-                        .angle(Angle.BOTTOM)
-                        .spread(Spread.ROUND)
+                        .spread(360)
                         .shapes(Arrays.asList(Shape.Square.INSTANCE, Shape.Circle.INSTANCE, drawableShape))
                         .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0xb48def))
-                        .setSpeedBetween(0f, 15f)
-                        .position(new Position.Relative(0.0, 0.0).between(new Position.Relative(1.0, 0.0)))
+                        .setSpeedBetween(0f, 30f)
+                        .position(new Position.Relative(0.5, 0.3))
                         .build()
         );
     }

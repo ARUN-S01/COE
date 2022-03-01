@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="1dp"
+    android:id="@+id/cardNotification"
+    android:layout_marginTop="15dp"
+
+    android:theme="@style/Theme.MaterialComponents.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCourseNameLayout">
+
+            <TextView
+                android:id="@+id/notification_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Title Of Notification"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnnew"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="New"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:cornerRadius="5dp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/bodyNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCourseNameLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Notification Body" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

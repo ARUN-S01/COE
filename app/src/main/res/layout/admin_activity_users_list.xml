@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminactivity.useractivity.UsersListActivity">
+
+    <ImageView
+        android:id="@+id/btnPrevious_user"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/users"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/btnPrevious_user"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnPrevious_user"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="25dp" />
+
+</RelativeLayout>

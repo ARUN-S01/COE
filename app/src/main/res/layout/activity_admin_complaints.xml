@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminactivity.examsactivity.AdminExamsActivity"
+    android:theme="@style/Theme.MaterialComponents.Light">
+
+    <ImageView
+        android:id="@+id/btnPrevious"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/ic_back_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/btnPrevious"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/exam"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnPrevious"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="25dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/statisticsCard"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@color/pinkish_card_color"
+            android:backgroundTint="@color/pinkish_card_color"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTotalExams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="100"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/total_exams"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="top|end"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtOngoingExams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="20"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/ongoing_exams"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginLeft="60dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCompletedExams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="80"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/completed_exams"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtUpcomingExams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="80"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/upcoming_exams"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnPendingComplaints"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/statisticsCard"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/orange"
+            android:clickable="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:padding="20dp"
+                    android:text="@string/ongoing_exams1"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="25dp"
+                    android:src="@drawable/outline_update_24" />
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnAddressedComplaints"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/btnPendingComplaints"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/darkblue"
+            android:clickable="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:padding="20dp"
+                    android:text="@string/completed_exams1"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="25dp"
+                    android:src="@drawable/ic_baseline_done_outline_24" />
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

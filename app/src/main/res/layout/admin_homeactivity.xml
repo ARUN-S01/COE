@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homeactivity.HomeActivity"
-    android:id="@+id/drawerview"
+    tools:context=".adminactivity.AdminHomeActivity"
+    android:id="@+id/admindrawerview"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/topBar"
+            android:id="@+id/admin_topBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_marginTop="7dp"
@@ -26,8 +24,8 @@
             app:navigationIconTint="@color/black"
             app:title="@string/app_name"
             app:titleTextAppearance="@style/ToolbarTheme.Text"
-            >
 
+            >
 
             <ImageView
                 android:id="@+id/btnProfile"
@@ -38,21 +36,33 @@
                 android:layout_gravity="end"
                 android:layout_marginRight="20dp"
                 android:foregroundGravity="center"
-                app:srcCompat="@drawable/profile_icon" />
+                app:srcCompat="@drawable/ic_baseline_admin_panel_settings_24" />
+
         </androidx.appcompat.widget.Toolbar>
 
-
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/examsRecyclerView"
+            android:id="@+id/adminExamsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/topBar"
+            android:layout_below="@+id/admin_topBar"
             android:layout_marginTop="10dp"
             android:padding="20dp" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddExam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/red"
+            app:borderWidth="0dp"
+            app:srcCompat="@drawable/ic_plus" />
+
     </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
+        android:id="@+id/admin_navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
@@ -63,10 +73,9 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.navTheme"
-        app:headerLayout="@layout/navigation_header"
+        app:headerLayout="@layout/admin_navigation_header"
         app:itemBackground="@drawable/navigation_item_style"
         app:itemVerticalPadding="15dp"
         app:itemTextAppearance="@style/NavigationDrawerStyle"
-        app:menu="@menu/drawer_layout" />
-
+        app:menu="@menu/admin_drawer_layout" />
 </androidx.drawerlayout.widget.DrawerLayout>

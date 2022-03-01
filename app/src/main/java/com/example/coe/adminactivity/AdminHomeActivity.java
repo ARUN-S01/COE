@@ -1,10 +1,10 @@
-package com.example.coe.homeactivity;
-
-
+package com.example.coe.adminactivity;
 
 import static com.example.coe.LoginActivity.app;
 
-
+import com.example.coe.LogoutActivity;
+import com.example.coe.adminactivity.examsactivity.AdminExamsActivity;
+import com.example.coe.adminactivity.useractivity.AdminUser;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,34 +17,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.coe.LogoutActivity;
 import com.example.coe.R;
-import com.example.coe.complaints.ComplaintsActivity;
+import com.example.coe.adminactivity.admincreateexamactivity.CreateExamActivity;
+import com.example.coe.adminactivity.useractivity.UsersListActivity;
 import com.example.coe.examactivity.Exam;
 import com.example.coe.examactivity.ExamsAdapter;
 import com.example.coe.examactivity.OnLoadMoreListener;
-import com.example.coe.notificationactivity.Notification;
-import com.example.coe.notificationactivity.NotificationActivity;
-import com.example.coe.resultactivity.ResultActivity;
-import com.example.coe.timetableactivity.TimeTableActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
-
 import org.bson.Document;
-import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 import io.realm.mongodb.RealmResultTask;
@@ -52,72 +41,51 @@ import io.realm.mongodb.User;
 import io.realm.mongodb.mongo.MongoClient;
 import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
-import io.realm.mongodb.mongo.iterable.FindIterable;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
+public class AdminHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-  //  public long count = 0;
-  //  public long or_count = 0;
     Toolbar toolbar;
     TextView user_name;
-    public static ArrayList<Notification> notification =  null;
     private ArrayList<Exam> exams;
     private RecyclerView recyclerView;
+    private FloatingActionButton btnCreateExam;
+    public static ArrayList<AdminUser> users = new ArrayList<AdminUser>();
     private ExamsAdapter contactAdapter;
 
+    //private Realm backgroundThreadRealm;
+    //public static boolean dataAdded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_activity);
+        setContentView(R.layout.admin_homeactivity);
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        drawerLayout = findViewById(R.id.drawerview);
-        navigationView = findViewById(R.id.navigation_view);
-        toolbar = findViewById(R.id.topBar);
-
-
+        drawerLayout = findViewById(R.id.admindrawerview);
+        navigationView = findViewById(R.id.admin_navigation_view);
+        toolbar = findViewById(R.id.admin_topBar);
+        btnCreateExam = findViewById(R.id.btnAddExam);
 
         navigationView.setNavigationItemSelectedListener(this);
 
         setSupportActionBar(toolbar);
         exams = new ArrayList<>();
-        recyclerView = (RecyclerView) findViewById(R.id.examsRecyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.adminExamsRecyclerView);
 
         User user1 = app.currentUser();
-        //Map<String, User> user2 = app.allUsers();
-        //for(User map : user2.values()){
-          //  Toast.makeText(HomeActivity.this,map.getProfile().getEmail(),Toast.LENGTH_SHORT).show();
-        //}
-        //Toast.makeText(HomeActivity.this,user2.toString(),Toast.LENGTH_SHORT).show();
-        Document doc = new Document("user-id-field",user1.getId());
+
         MongoClient mongoClient = user1.getMongoClient("mongodb-atlas");
         MongoDatabase mongoDatabase = mongoClient.getDatabase("coe");
-
         //Exams Collection
         Document docs = new Document();
         docs.put("is_available","true");
 
-
-       if(notification == null){
-            notifications(mongoDatabase);
-       }
-
         MongoCollection<Document> admin = mongoDatabase.getCollection("admin_exams");
-        //admin.count().getAsync(task -> {
-          //  if (task.isSuccess()) {
-            //    count = task.get();
-              //  Log.v("EXAMPLE",
-                //        "successfully counted, number of documents in the collection: " +
-                  //              count);
-            //} else {
-              //  Log.e("EXAMPLE", "failed to count documents with: ", task.getError());
-           // }
-        //});
+
         RealmResultTask<MongoCursor<Document>> findTask = admin.find(docs).iterator();
         findTask.getAsync(task -> {
             if (task.isSuccess()) {
@@ -135,28 +103,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     exams.add(exam);
                 }
             } else {
-                Toast.makeText(HomeActivity.this, task.getError().toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminHomeActivity.this, task.getError().toString(),Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
+        Map<String,User> user2 = app.allUsers();
+        for(User map : user2.values()){
+            users.add(new AdminUser(map.getProfile().getEmail(),map.getId()));
+        }
         View headerView = navigationView.getHeaderView(0);
-        user_name = (TextView) headerView.findViewById(R.id.username_home);
-
-        //UserName Collection
-        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("data");
-        mongoCollection.findOne(doc).getAsync(task -> {
-            if (task.isSuccess()) {
-                Document result = task.get();
-                //Toast.makeText(HomeActivity.this,result.get("name").toString(),Toast.LENGTH_SHORT).show();
-                //to_update = result.get("name").toString();
-                user_name.setText(result.get("name").toString());
-                Log.v("EXAMPLE", "successfully found a document: " + result);
-            } else {
-                Log.e("EXAMPLE", "failed to find document with: ", task.getError());
-            }
-        });
+        //user_name = (TextView) headerView.findViewById(R.id.username_home);
+        //user_name.setText("Admin");
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -166,16 +122,53 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         contactAdapter = new ExamsAdapter((androidx.recyclerview.widget.RecyclerView) recyclerView, exams, this);
         recyclerView.setAdapter(contactAdapter);
 
-
         contactAdapter.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore() {
                 //Toast.makeText(HomeActivity.this, "Loading data completed", Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnCreateExam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminHomeActivity.this, CreateExamActivity.class));
+            }
+        });
+
     }
 
-
+//    private void addSampleData() {
+//
+//        if(!dataAdded)
+//        {
+//            for (int i = 1; i < 30; i++) {
+//
+//                int finalI = i;
+//                backgroundThreadRealm.executeTransaction(realm->{
+//                    Number num = realm.where(Exam.class).max("_id");
+//                    int nextID;
+//                    if(num == null) {
+//                        nextID = 1;
+//                    } else {
+//                        nextID = num.intValue() + 1;
+//                    }
+//                    Exam exam = realm.createObject(Exam.class,nextID);
+//                    exam.setExamFee(feeGeneration());
+//                    exam.setEligibility("2nd year");
+//                    exam.setExamName("Course" + finalI);
+//                    exam.setExamDate("01/04/23");
+//                    exam.setLastDate("12/12/22");
+//                    exam.setLastDateWithFine("15/12/22");
+//                    if(finalI %3==0)
+//                        exam.setRegistered(true);
+//                    realm.insert(exam);
+//                });
+//            }
+//        }
+//
+//
+//    }
 
 
     @Override
@@ -183,29 +176,31 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch(item.getItemId()){
             case R.id.navHome:
                 // Add your navigational page code
-
                 break;
             case R.id.navAnnouncements:
-                startActivity(new Intent(HomeActivity.this, NotificationActivity.class));
                 // Add your navigational page code
                 break;
             case R.id.navTimeTable:
-                startActivity(new Intent(HomeActivity.this, TimeTableActivity.class));
                 // Add your navigational page code
                 break;
             case R.id.navResult:
-                startActivity(new Intent(HomeActivity.this, ResultActivity.class));
                 // Add your navigational page code
                 break;
             case R.id.navComplaints:
-
-                startActivity(new Intent(HomeActivity.this, ComplaintsActivity.class));
-
+                //startActivity(new Intent(AdminHomeActivity.this, ComplaintsActivity.class));
                 break;
-            case R.id.navLogout:
-                startActivity(new Intent(HomeActivity.this, LogoutActivity.class));
+            case R.id.navAdmin:
+                //startActivity(new Intent(AdminHomeActivity.this,AdminActivity.class));
+                startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
+                break;
+            case R.id.navUsers:
+                startActivity(new Intent(AdminHomeActivity.this, UsersListActivity.class));
+                break;
+            case R.id.AdminNavLogout:
+                startActivity(new Intent(AdminHomeActivity.this, LogoutActivity.class));
                 finish();
                 break;
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -221,32 +216,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
     private String feeGeneration() {
         return "Rs.1200" ;
     }
-    public void notifications(MongoDatabase mongo){
-        notification = new ArrayList<>();
-        MongoCollection<Document> mongo_collection = mongo.getCollection("notifications");
-
-        Document docs = new Document();
-        docs.put("visible","true");
-        RealmResultTask<MongoCursor<Document>> findTask = mongo_collection.find(docs).iterator();
-
-        findTask.getAsync(task -> {
-            if(task.isSuccess()){
-                MongoCursor<Document> result = task.get();
-                while(result.hasNext()){
-                    //or_count += 1;
-                    Notification notifi = new Notification();
-                    Document ds = result.next();
-                    notifi.setTitle(ds.get("title").toString());
-                    notifi.setBody(ds.get("body").toString());
-                    notification.add(notifi);
-                }
-            }
-        });
-        return;
-    }
-
 }
-

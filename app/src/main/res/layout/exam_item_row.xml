@@ -40,19 +40,18 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnHallTicket"
-                android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
-                android:fontFamily="@font/montserrat"
                 android:layout_height="35dp"
-                app:cornerRadius="5dp"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:backgroundTint="@color/red"
+                android:fontFamily="@font/montserrat"
                 android:gravity="center"
                 android:text="Hall Ticket"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="10sp"
-                />
+                app:cornerRadius="5dp" />
 
         </RelativeLayout>
 
@@ -100,7 +99,6 @@
             android:fontFamily="@font/montserrat"
             android:text="12/12/22"
             android:textColor="@color/black" />
-
 
 
     </RelativeLayout>

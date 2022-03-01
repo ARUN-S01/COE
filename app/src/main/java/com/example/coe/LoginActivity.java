@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.coe.adminactivity.AdminHomeActivity;
 import com.example.coe.homeactivity.HomeActivity;
 import static com.example.coe.SignupActivity.name;
 import org.bson.Document;
@@ -88,7 +89,12 @@ public class LoginActivity extends AppCompatActivity {
                                 createField();
                             }
                             Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                            if(app.currentUser().getId().equals("621514fb9a82fc5754bca707")){
+                                startActivity(new Intent(LoginActivity.this,AdminHomeActivity.class));
+                            }
+                            else{
+                                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                            }
                             finish();
                             //Toast.makeText(LoginActivity.this, app.currentUser().toString(),Toast.LENGTH_SHORT).show();
                         } else {

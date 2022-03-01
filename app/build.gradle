@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'realm-android'
 }
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdk 31
 
@@ -39,6 +39,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.firebase:firebase-analytics:18.0.3'
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.google.android.gms:play-services-nearby:18.0.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -47,7 +50,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     implementation "com.google.android.gms:play-services-wallet:18.0.0"
+
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'com.google.ar.sceneform:filament-android:1.17.1'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }

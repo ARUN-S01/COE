@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770442193781",
+    "project_id": "coe-tce-64",
+    "storage_bucket": "coe-tce-64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770442193781:android:8a5079494c662cccfb813c",
+        "android_client_info": {
+          "package_name": "com.example.coe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770442193781-hum3v079dffdec28pndgr7qh5b13qkbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3VYWD4wPKNt4Zbae-WeZ0EnAHVdefLnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770442193781-hum3v079dffdec28pndgr7qh5b13qkbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

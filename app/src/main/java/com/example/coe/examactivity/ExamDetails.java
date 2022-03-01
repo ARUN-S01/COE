@@ -5,7 +5,9 @@ import static com.example.coe.examactivity.ExamsAdapter.clicked_exam_eli;
 import static com.example.coe.examactivity.ExamsAdapter.clicked_exam_fee;
 import static com.example.coe.examactivity.ExamsAdapter.clicked_exam_last_date;
 import static com.example.coe.examactivity.ExamsAdapter.clicked_exam_name;
+import static com.example.coe.examactivity.ExamsAdapter.is_admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.coe.R;
+import com.example.coe.examregisterationactivity.ExamRegisterationActivity;
 
 public class ExamDetails extends AppCompatActivity {
     @Override
@@ -40,14 +43,20 @@ public class ExamDetails extends AppCompatActivity {
         Button back_details = (Button) findViewById(R.id.backbutton);
         Button register_details = (Button) findViewById(R.id.registerbutton);
         ImageView btnpre = (ImageView) findViewById(R.id.btnpre);
+        TextView title = (TextView) findViewById(R.id.timetable);
+        if(is_admin){
+            title.setText("Exam Details");
+            register_details.setVisibility(View.GONE);
+        }
+        else{
+            register_details.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(ExamDetails.this, ExamRegisterationActivity.class));
+                }
+            });
+        }
 
-
-        register_details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         back_details.setOnClickListener(new View.OnClickListener() {
             @Override
