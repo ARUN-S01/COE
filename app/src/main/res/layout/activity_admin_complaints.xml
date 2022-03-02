@@ -8,11 +8,11 @@
     android:theme="@style/Theme.MaterialComponents.Light">
 
     <ImageView
-        android:id="@+id/btnPrevious"
+        android:id="@+id/btnPrevious_exam"
         android:layout_width="30dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
         app:srcCompat="@drawable/ic_back_button" />
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_height="48dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/btnPrevious"
+        android:layout_toRightOf="@id/btnPrevious_exam"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:text="@string/exam"
@@ -31,7 +31,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/btnPrevious"
+        android:layout_below="@id/btnPrevious_exam"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="25dp">
 

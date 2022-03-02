@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:theme="@style/Theme.MaterialComponents.Light"
     android:layout_height="match_parent"
-    tools:context=".resultactivity.ResultActivity">
+    tools:context=".adminactivity.PublishResultActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -20,72 +20,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-       <!-- <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="342dp"
-            android:layout_height="59dp"
-            android:layout_margin="20dp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="342dp"
-                android:layout_height="59dp"
-
-                android:layout_weight="1"
-                android:inputType="none"
-                android:text="@string/choose_programming_language" />
-        </com.google.android.material.textfield.TextInputLayout> -->
 
         <Button
-            android:id="@+id/GetResultButton"
+            android:id="@+id/UploadResultButton"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:background="@drawable/roundbutton"
             android:backgroundTint="@color/app_color"
             android:fontFamily="@font/montserrat"
-            android:text="Download"
+            android:text="Select"
             android:textColor="@color/white"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.78" />
+            app:layout_constraintVertical_bias="0.707" />
 
         <TextView
-            android:id="@+id/ChooseSemester"
+            android:id="@+id/res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
 
-            android:text="Download Here"
+            android:text="Choose File To Upload"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.282" />
+            app:layout_constraintVertical_bias="0.226" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/Result"
+        android:id="@+id/pub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="17dp"
-        android:layout_toRightOf="@id/imageViewres"
+        android:layout_toRightOf="@id/imageView_"
         android:fontFamily="@font/montserrat"
-        android:text="@string/result"
+        android:text="Publish Result"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -97,7 +74,7 @@
         app:layout_constraintVertical_bias="0.016" />
 
     <ImageView
-        android:id="@+id/imageViewres"
+        android:id="@+id/imageView_"
         android:layout_width="30dp"
         android:layout_height="48dp"
         android:layout_marginLeft="2dp"

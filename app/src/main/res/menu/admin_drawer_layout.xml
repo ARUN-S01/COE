@@ -8,6 +8,11 @@
             android:id="@+id/navHome"
             android:icon="@drawable/homeic"
             android:title="@string/home" />
+        <item
+            android:checked="true"
+            android:id="@+id/navAdminExam"
+            android:icon="@drawable/exam"
+            android:title="Manage Exams" />
 
         <item
             android:checkable="true"
@@ -24,7 +29,7 @@
             android:checkable="true"
             android:id="@+id/navAdmin"
             android:icon="@drawable/complaintsicon"
-            android:title="Complaints"/>
+            android:title="Manage Complaints"/>
         <item
             android:id="@+id/navUsers"
             android:checkable="true"

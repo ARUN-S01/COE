@@ -184,14 +184,18 @@ public class AdminHomeActivity extends AppCompatActivity implements NavigationVi
                 // Add your navigational page code
                 break;
             case R.id.navResult:
+                startActivity(new Intent(AdminHomeActivity.this,PublishResultActivity.class));
                 // Add your navigational page code
+                break;
+            case R.id.navAdminExam:
+                startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
                 break;
             case R.id.navComplaints:
                 //startActivity(new Intent(AdminHomeActivity.this, ComplaintsActivity.class));
                 break;
             case R.id.navAdmin:
                 //startActivity(new Intent(AdminHomeActivity.this,AdminActivity.class));
-                startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
+                //startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
                 break;
             case R.id.navUsers:
                 startActivity(new Intent(AdminHomeActivity.this, UsersListActivity.class));

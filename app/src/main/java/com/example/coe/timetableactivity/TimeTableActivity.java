@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,11 +34,13 @@ public class TimeTableActivity extends AppCompatActivity {
     TextView mShowSelectedStartDateText,mShowSelectedEndDateText;
     String startdate_txt = null,enddate_lext = null;
     static final int DATE_DIALOG_ID = 0;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timetable);
+        back = (ImageView) findViewById(R.id.imageView_1);
         String[] items = new String[]{"Semester 1", "Semester 2", "Semester 3", "Semester 4"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         AutoCompleteTextView dropdown = (AutoCompleteTextView)
@@ -98,6 +101,12 @@ public class TimeTableActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(TimeTableActivity.this,date_,myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
