@@ -296,6 +296,7 @@
                     android:layout_height="0dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:scrollHorizontally="true"
                     android:background="#000000">
 
                     <TextView
@@ -313,6 +314,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_column="1"
+                        android:scrollHorizontally="true"
+                        android:id="@+id/day1_1st_hr"
+                        android:layout_marginBottom="1dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:layout_marginBottom="1dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:id="@+id/day1_2nd_hr"
+                        android:text="@string/subject"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:id="@+id/day1_3rd_hr"
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
@@ -327,6 +354,7 @@
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
+                        android:id="@+id/day1_4th_hr"
                         android:text="@string/subject"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
@@ -339,28 +367,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_column="2"
-                        android:layout_marginBottom="1dp"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="@string/subject"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_column="1"
-                        android:layout_marginBottom="1dp"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="@string/subject"
+                        android:id="@+id/day1_5th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -373,6 +380,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day1_6th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
                 </TableRow>
@@ -383,6 +391,7 @@
                     android:layout_height="0dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:scrollHorizontally="true"
                     android:background="#000000">
 
                     <TextView
@@ -400,6 +409,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_column="0"
+                        android:id="@+id/day2_1st_hr"
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
@@ -414,6 +424,7 @@
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
+                        android:id="@+id/day2_2nd_hr"
                         android:text="@string/subject"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
@@ -426,6 +437,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day2_3rd_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -437,6 +449,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day2_4th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -448,6 +461,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day2_5th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -460,6 +474,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day2_6th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -470,6 +485,7 @@
                     android:layout_height="0dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:scrollHorizontally="true"
                     android:background="#000000">
 
                     <TextView
@@ -490,6 +506,7 @@
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
+                        android:id="@+id/day3_1st_hr"
                         android:text="@string/subject"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
@@ -498,6 +515,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_column="2"
+                        android:id="@+id/day3_2nd_hr"
+                        android:layout_marginBottom="1dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="@string/subject"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:id="@+id/day3_3rd_hr"
+                        android:layout_marginBottom="1dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="@string/subject"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:id="@+id/day3_4th_hr"
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
                         android:gravity="center"
@@ -513,28 +555,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_column="1"
-                        android:layout_marginBottom="1dp"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="@string/subject"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_column="1"
-                        android:layout_marginBottom="1dp"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="@string/subject"
+                        android:id="@+id/day3_5th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -547,6 +568,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day3_6th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
                 </TableRow>
@@ -556,6 +578,7 @@
                     android:layout_height="0dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:scrollHorizontally="true"
                     android:background="#000000">
 
                     <TextView
@@ -577,6 +600,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day4_1st_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -586,6 +610,7 @@
                         android:layout_column="2"
                         android:layout_marginBottom="1dp"
                         android:background="#FFFFFF"
+                        android:id="@+id/day4_2nd_hr"
                         android:gravity="center"
                         android:text="@string/subject"
                         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -599,6 +624,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day4_3rd_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -610,6 +636,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day4_4th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -621,6 +648,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day4_5th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -633,6 +661,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day4_6th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
                 </TableRow>
@@ -642,6 +671,7 @@
                     android:layout_height="0dp"
                     android:layout_margin="1dp"
                     android:layout_weight="1"
+                    android:scrollHorizontally="true"
                     android:background="#000000">
 
                     <TextView
@@ -663,6 +693,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_1st_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -674,6 +705,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_2nd_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -685,6 +717,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_3rd_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -696,6 +729,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_4th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -707,6 +741,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_5th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
 
@@ -719,6 +754,7 @@
                         android:background="#FFFFFF"
                         android:gravity="center"
                         android:text="@string/subject"
+                        android:id="@+id/day5_6th_hr"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="14sp" />
                 </TableRow>

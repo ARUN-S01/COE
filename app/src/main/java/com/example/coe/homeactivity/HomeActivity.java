@@ -35,6 +35,7 @@ import com.example.coe.examactivity.OnLoadMoreListener;
 import com.example.coe.notificationactivity.Notification;
 import com.example.coe.notificationactivity.NotificationActivity;
 import com.example.coe.resultactivity.ResultActivity;
+import com.example.coe.seatallotmentactivity.SeatAllotmentActivity;
 import com.example.coe.timetableactivity.TimeTableActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -201,6 +202,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
                 startActivity(new Intent(HomeActivity.this, ComplaintsActivity.class));
 
+                break;
+            case R.id.navSeating:
+                startActivity(new Intent(HomeActivity.this, SeatAllotmentActivity.class));
                 break;
             case R.id.navLogout:
                 startActivity(new Intent(HomeActivity.this, LogoutActivity.class));

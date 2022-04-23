@@ -79,6 +79,12 @@
             android:name=".adminactivity.useractivity.UsersListActivity"
             android:exported="true" />
 
+        <activity android:name=".adminactivity.PublishSeatAllotmentActivity"
+            android:exported="true"/>
+
+        <activity android:name=".seatallotmentactivity.SeatAllotmentActivity"
+            android:exported="true"/>
+
         <activity
             android:name=".adminactivity.AdminHomeActivity"
             android:exported="true" >

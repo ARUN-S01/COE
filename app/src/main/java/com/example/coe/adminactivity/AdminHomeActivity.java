@@ -4,6 +4,7 @@ import static com.example.coe.LoginActivity.app;
 
 import com.example.coe.LogoutActivity;
 import com.example.coe.adminactivity.examsactivity.AdminExamsActivity;
+import com.example.coe.adminactivity.managecomplaintsactivity.ManageComplaints;
 import com.example.coe.adminactivity.useractivity.AdminUser;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -191,15 +192,22 @@ public class AdminHomeActivity extends AppCompatActivity implements NavigationVi
                 startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
                 break;
             case R.id.navComplaints:
+                startActivity(new Intent(AdminHomeActivity.this, ManageComplaints.class));
                 //startActivity(new Intent(AdminHomeActivity.this, ComplaintsActivity.class));
                 break;
             case R.id.navAdmin:
                 //startActivity(new Intent(AdminHomeActivity.this,AdminActivity.class));
                 //startActivity(new Intent(AdminHomeActivity.this, AdminExamsActivity.class));
                 break;
+
             case R.id.navUsers:
                 startActivity(new Intent(AdminHomeActivity.this, UsersListActivity.class));
                 break;
+
+            case R.id.navAdminSeat:
+                startActivity(new Intent(AdminHomeActivity.this,PublishSeatAllotmentActivity.class));
+                break;
+
             case R.id.AdminNavLogout:
                 startActivity(new Intent(AdminHomeActivity.this, LogoutActivity.class));
                 finish();

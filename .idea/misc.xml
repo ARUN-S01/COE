@@ -21,7 +21,7 @@
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/drawable/payment_option.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/drawable/roundbutton.xml" value="0.1875" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/drawable/saved_card.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/font/montserrat.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/font/montserrat.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_admin_complaints.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_complaint_details.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_complaints.xml" value="0.17552083333333332" />
@@ -30,11 +30,13 @@
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_raise_complaint.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_result.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_seat.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/activity_timetable.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/admin_activity_users_list.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/admin_homeactivity.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/admin_navigation_header.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/admin_publish_result_activity.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/admin_publish_seat_activity.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/complaint_type_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/complaints_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/confirm_payment.xml" value="0.22" />
@@ -55,7 +57,7 @@
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/splash_screen_activity.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/layout/users_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/menu/admin_drawer_layout.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/menu/drawer_layout.xml" value="0.6666666666666666" />
+        <entry key="..\:/Users/a2r0u/AndroidStudioProjects/COE/app/src/main/res/menu/drawer_layout.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

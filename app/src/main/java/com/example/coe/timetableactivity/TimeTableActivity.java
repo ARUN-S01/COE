@@ -40,6 +40,40 @@ public class TimeTableActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timetable);
+        TextView day1_1st = (TextView) findViewById(R.id.day1_1st_hr);
+        TextView day1_2nd = (TextView) findViewById(R.id.day1_2nd_hr);
+        TextView day1_3rd = (TextView) findViewById(R.id.day1_3rd_hr);
+        TextView day1_4th = (TextView) findViewById(R.id.day1_4th_hr);
+        TextView day1_5th = (TextView) findViewById(R.id.day1_5th_hr);
+        TextView day1_6th = (TextView) findViewById(R.id.day1_6th_hr);
+
+        TextView day2_1st = (TextView) findViewById(R.id.day2_1st_hr);
+        TextView day2_2nd = (TextView) findViewById(R.id.day2_2nd_hr);
+        TextView day2_3rd = (TextView) findViewById(R.id.day2_3rd_hr);
+        TextView day2_4th = (TextView) findViewById(R.id.day2_4th_hr);
+        TextView day2_5th = (TextView) findViewById(R.id.day2_5th_hr);
+        TextView day2_6th = (TextView) findViewById(R.id.day2_6th_hr);
+
+        TextView day3_1st = (TextView) findViewById(R.id.day3_1st_hr);
+        TextView day3_2nd = (TextView) findViewById(R.id.day3_2nd_hr);
+        TextView day3_3rd = (TextView) findViewById(R.id.day3_3rd_hr);
+        TextView day3_4th = (TextView) findViewById(R.id.day3_4th_hr);
+        TextView day3_5th = (TextView) findViewById(R.id.day3_5th_hr);
+        TextView day3_6th = (TextView) findViewById(R.id.day3_6th_hr);
+
+        TextView day4_1st = (TextView) findViewById(R.id.day4_1st_hr);
+        TextView day4_2nd = (TextView) findViewById(R.id.day4_2nd_hr);
+        TextView day4_3rd = (TextView) findViewById(R.id.day4_3rd_hr);
+        TextView day4_4th = (TextView) findViewById(R.id.day4_4th_hr);
+        TextView day4_5th = (TextView) findViewById(R.id.day4_5th_hr);
+        TextView day4_6th = (TextView) findViewById(R.id.day4_6th_hr);
+
+        TextView day5_1st = (TextView) findViewById(R.id.day5_1st_hr);
+        TextView day5_2nd = (TextView) findViewById(R.id.day5_2nd_hr);
+        TextView day5_3rd = (TextView) findViewById(R.id.day5_3rd_hr);
+        TextView day5_4th = (TextView) findViewById(R.id.day5_4th_hr);
+        TextView day5_5th = (TextView) findViewById(R.id.day5_5th_hr);
+        TextView day5_6th = (TextView) findViewById(R.id.day5_6th_hr);
         back = (ImageView) findViewById(R.id.imageView_1);
         String[] items = new String[]{"Semester 1", "Semester 2", "Semester 3", "Semester 4"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -57,6 +91,41 @@ public class TimeTableActivity extends AppCompatActivity {
                 } else if (i == 2) {
                     Toast.makeText(getApplicationContext(), "Semester 3 Selected", Toast.LENGTH_SHORT).show();
                 } else if (i == 3) {
+                    day1_1st.setText("ELECT");
+                    day1_2nd.setText("LATMATH");
+                    day1_3rd.setText("ADP");
+                    day1_4th.setText("DBMS");
+                    day1_5th.setText("LAB");
+                    day1_6th.setText("LAB");
+
+                    day2_1st.setText("ADP");
+                    day2_2nd.setText("PROENG");
+                    day2_3rd.setText("MATH");
+                    day2_4th.setText("CN");
+                    day2_5th.setText("PM");
+                    day2_6th.setText("CONSTI");
+
+                    day3_1st.setText("DBMS");
+                    day3_2nd.setText("PM");
+                    day3_3rd.setText("ELEC");
+                    day3_4th.setText("ADP");
+                    day3_5th.setText("LATMATH");
+                    day3_6th.setText("CONSTI");
+
+                    day4_1st.setText("CN");
+                    day4_2nd.setText("DBMS");
+                    day4_3rd.setText("PROFENG");
+                    day4_4th.setText("PROFENG");
+                    day4_5th.setText("MATH");
+                    day4_6th.setText("CN");
+
+                    day5_1st.setText("MATH");
+                    day5_2nd.setText("CN");
+                    day5_3rd.setText("LATMATH");
+                    day5_4th.setText("ELEC");
+                    day5_5th.setText("LAB");
+                    day5_6th.setText("LAB");
+
                     Toast.makeText(getApplicationContext(), "Semester 4 Selected", Toast.LENGTH_SHORT).show();
                 }
             }

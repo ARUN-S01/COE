@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    android:layout_height="match_parent"
+    tools:context=".seatallotmentactivity.SeatAllotmentActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="370dp"
+        android:layout_height="194dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/textInputLayout"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_width="342dp"
+             android:layout_height="59dp"
+             android:layout_margin="20dp"
+
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+
+             <AutoCompleteTextView
+                 android:id="@+id/autoCompleteTextView"
+                 android:layout_width="342dp"
+                 android:layout_height="59dp"
+
+                 android:layout_weight="1"
+                 android:inputType="none"
+                 android:text="@string/choose_programming_language" />
+         </com.google.android.material.textfield.TextInputLayout> -->
+
+        <Button
+            android:id="@+id/GetResultButton"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/roundbutton"
+            android:backgroundTint="@color/app_color"
+            android:fontFamily="@font/montserrat"
+            android:text="Download"
+            android:textColor="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.78" />
+
+        <TextView
+            android:id="@+id/ChooseSemester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+
+            android:text="Download Here"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.282" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Seatallotment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/imageViewres"
+        android:fontFamily="@font/montserrat"
+        android:text="Seat Allotment"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <ImageView
+        android:id="@+id/imageViewres"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/ic_back_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

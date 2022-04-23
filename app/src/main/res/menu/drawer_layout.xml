@@ -24,6 +24,14 @@
             android:id="@+id/navResult"
             android:icon="@drawable/resultsicon"
             android:title="@string/result" />
+
+        <item
+            android:checkable="true"
+            android:id="@+id/navSeating"
+
+            android:icon="@drawable/seat_exam"
+            android:title="Seat Allotment" />
+
         <item
             android:checkable="true"
             android:id="@+id/navComplaints"

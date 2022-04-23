@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                                 createField();
                             }
                             Toast.makeText(LoginActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
-                            if(app.currentUser().getId().equals("621514fb9a82fc5754bca707")){
+                            if(app.currentUser().getId().equals("62507e2b8039fe7bc176d9f3")){
                                 startActivity(new Intent(LoginActivity.this,AdminHomeActivity.class));
                             }
                             else{

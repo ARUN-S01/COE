@@ -19,6 +19,12 @@
             android:id="@+id/navTimeTable"
             android:icon="@drawable/timetableicon"
             android:title="@string/timetable" />
+
+        <item
+            android:checkable="true"
+            android:id="@+id/navAdminSeat"
+            android:icon="@drawable/seat_exam"
+            android:title="Seat Allotment" />
         <item
             android:checkable="true"
             android:id="@+id/navResult"
