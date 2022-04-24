@@ -17,22 +17,24 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.coe.R;
+import com.example.coe.payment.paymentoptions.GooglePayActivity;
+import com.google.android.gms.common.api.GoogleApiActivity;
 
 public class FeePaymentOptionActivity extends AppCompatActivity {
+    @Override
     public void onCreate(Bundle savedinstance){
         super.onCreate(savedinstance);
+        setContentView(R.layout.fee_payment_activity);
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         int amount = 2000;
         Button but = (Button) findViewById(R.id.cancelButton);
         final String[] mode_of_payment = {null};
-        setContentView(R.layout.fee_payment_activity);
 
         Button pay = (Button) findViewById(R.id.payment);
         TextView amount_text = (TextView) findViewById(R.id.amount_view);
         amount_text.setText("₹ " + clicked_exam_fee);
         TextView set_method_ = (TextView) findViewById(R.id.set_method);
         if(mode_of_payment[0] == null){
-
             set_method_.setVisibility(View.INVISIBLE);
         }
         LinearLayout gpay = (LinearLayout) findViewById(R.id.linearLayout2);
@@ -43,13 +45,14 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
                 mode_of_payment[0] = "Google Pay";
                 set_method_.setVisibility(View.VISIBLE);
                 set_method_.setText("Choosen Method: " +mode_of_payment[0]);
+                startActivity(new Intent(FeePaymentOptionActivity.this, GooglePayActivity.class));
             }
         });
         LinearLayout paytm = (LinearLayout) findViewById(R.id.linearLayout3);
         paytm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(FeePaymentOptionActivity.this,"Paytm",Toast.LENGTH_SHORT).show();
+               //Toast.makeText(FeePaymentOptionActivity.this,"Paytm",Toast.LENGTH_SHORT).show();
                 mode_of_payment[0] = "Paytm";
                 set_method_.setVisibility(View.VISIBLE);
                 set_method_.setText("Choosen Method: " +mode_of_payment[0]);
@@ -59,7 +62,7 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
         credit_debit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(FeePaymentOptionActivity.this,"Credit or Debit Card",Toast.LENGTH_SHORT).show();
+               //Toast.makeText(FeePaymentOptionActivity.this,"Credit or Debit Card",Toast.LENGTH_SHORT).show();
                 mode_of_payment[0] = "Credit or Debit Card";
                 set_method_.setVisibility(View.VISIBLE);
                 set_method_.setText("Choosen Method: " +mode_of_payment[0]);
@@ -69,7 +72,7 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
         apple_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(FeePaymentOptionActivity.this,"Apple Pay",Toast.LENGTH_SHORT).show();
+               //Toast.makeText(FeePaymentOptionActivity.this,"Apple Pay",Toast.LENGTH_SHORT).show();
                 mode_of_payment[0] = "Apple Pay";
                 set_method_.setVisibility(View.VISIBLE);
                 set_method_.setText("Choosen Method: " +mode_of_payment[0]);
@@ -79,7 +82,7 @@ public class FeePaymentOptionActivity extends AppCompatActivity {
         upi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(FeePaymentOptionActivity.this,"Upi Payment",Toast.LENGTH_SHORT).show();
+               //Toast.makeText(FeePaymentOptionActivity.this,"Upi Payment",Toast.LENGTH_SHORT).show();
                 mode_of_payment[0] = "Upi Payment";
                 set_method_.setVisibility(View.VISIBLE);
                 set_method_.setText("Choosen Method: " +mode_of_payment[0]);

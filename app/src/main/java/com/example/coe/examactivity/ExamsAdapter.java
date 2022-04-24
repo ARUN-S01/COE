@@ -131,7 +131,7 @@ public class ExamsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             examViewHolder.cardExamination.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(app.currentUser().getId().equals("621514fb9a82fc5754bca707")){
+                    if(app.currentUser().getId().equals("62507e2b8039fe7bc176d9f3")){
                         is_admin = true;
                     }
                     clicked_exam_name = exam.getExamName();

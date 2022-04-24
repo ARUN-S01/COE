@@ -38,8 +38,8 @@ public class ExamRegisterationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 usr_name = name.getText().toString();
                 register = reg_no.getText().toString();
-                Toast.makeText(ExamRegisterationActivity.this,"Under Developement",Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(ExamRegisterationActivity.this, FeePaymentOptionActivity.class));
+               // Toast.makeText(ExamRegisterationActivity.this,"Under Developement",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ExamRegisterationActivity.this, FeePaymentOptionActivity.class));
             }
         });
         reset.setOnClickListener(new View.OnClickListener() {

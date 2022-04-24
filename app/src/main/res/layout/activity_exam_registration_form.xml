@@ -22,7 +22,7 @@
         android:layout_height="48dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/btnPrevious"
+        android:layout_toRightOf="@id/btnPrevious_reg"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:text="@string/exam_registration"

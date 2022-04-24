@@ -35,6 +35,8 @@
             android:exported="true"/>
         <activity android:name=".SignupActivity"
             android:exported="true"/>
+        <activity android:name=".payment.paymentoptions.GooglePayActivity"
+            android:exported="true"/>
         <activity android:name=".payment.FeePaymentOptionActivity"
             android:exported="false">
         </activity>
